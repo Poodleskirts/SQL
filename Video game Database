@@ -1,0 +1,18 @@
+-- Creating a database for games
+
+CREATE TABLE store(id INTEGER PRIMARY KEY, Title TEXT, price INTEGER, rating INTEGER, esrb_rating TEXT, quantity INTEGER);
+
+INSERT INTO store VALUES
+(1, "Zelda", 50, 10, "pg13", 4);
+INSERT INTO store VALUES
+(2, "Halo", 30, 9, "M", 3);
+INSERT INTO store VALUES
+(3, "Overwatch", 0, 10, "T", 4);
+INSERT INTO store VALUES
+(4, "Silent Hill", 30, 6, "M", 1);
+INSERT INTO store VALUES
+(5, "Sly Cooper", 15, 10, "E", 2);
+
+-- displaying the database ordered by price and also showing the esrb rating for that game.
+
+SELECT * FROM store WHERE price > 10 ORDER BY esrb_rating;
